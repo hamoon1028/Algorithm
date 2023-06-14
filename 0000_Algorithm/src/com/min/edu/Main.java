@@ -16,7 +16,7 @@ public class Main {
 //		System.out.println(Arrays.toString(arr));
 		
 		Algorithm3 al3 = new Algorithm3();
-		int b = al3.solution("abababab");
+		int b = al3.solution("aaaa");
 		System.out.println(b);
 	
 	}		
