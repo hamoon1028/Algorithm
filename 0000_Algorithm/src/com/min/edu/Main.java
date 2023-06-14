@@ -20,9 +20,9 @@ public class Main {
 //		System.out.println(b);
 	
 		Algorithm4 al4 = new Algorithm4();
-		int[] a = {1,2};
-		int[] b = {3,3};
-		int rs = al4.solution1(a, b);
+		int[] a = {1,2,7};
+		int[] b = {3,2,2,1,5};
+		int rs = al4.solution(a, b);
 		System.out.println(rs);
 	}		
 }

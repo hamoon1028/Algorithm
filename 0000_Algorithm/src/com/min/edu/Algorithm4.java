@@ -5,21 +5,20 @@ import java.util.Arrays;
 public class Algorithm4 {
 
 	public int solution(int[] a, int[] b) {
-		int result = -1;
 		
 		Arrays.sort(a);
 		Arrays.sort(b);
 		
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < b.length; j++) {
-				if(a[i]==b[j]) {
-					return a[i];
+		int i = 0;
+		for (int j = 0; j < a.length; j++) {
+			while(b[i] <= a[j] && i < b.length ) {
+				if(a[j]==b[i]) {
+					return a[j];
 				}
+				i++;
 			}
 		}
-		
-		return result;
-		//시간복잡도 O^2
+		return -1;
 	}
 	
 	public int solution1(int[] a, int[] b) {
@@ -34,7 +33,6 @@ public class Algorithm4 {
 			}
 		
 		return result;
-		//시간복잡도 O(NlogN)
 	}
 	
 }
