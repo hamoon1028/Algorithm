@@ -15,9 +15,14 @@ public class Main {
 //		Arrays.sort(arr);
 //		System.out.println(Arrays.toString(arr));
 		
-		Algorithm3 al3 = new Algorithm3();
-		int b = al3.solution("aaaa");
-		System.out.println(b);
+//		Algorithm3 al3 = new Algorithm3();
+//		int b = al3.solution("aaaa");
+//		System.out.println(b);
 	
+		Algorithm4 al4 = new Algorithm4();
+		int[] a = {1,2};
+		int[] b = {3,3};
+		int rs = al4.solution1(a, b);
+		System.out.println(rs);
 	}		
 }
