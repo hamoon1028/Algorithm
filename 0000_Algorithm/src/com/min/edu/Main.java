@@ -19,10 +19,13 @@ public class Main {
 //		int b = al3.solution("aaaa");
 //		System.out.println(b);
 	
-		Algorithm4 al4 = new Algorithm4();
-		int[] a = {1,2};
-		int[] b = {3,3};
-		int rs = al4.solution1(a, b);
-		System.out.println(rs);
+//		Algorithm4 al4 = new Algorithm4();
+//		int[] a = {1,2};
+//		int[] b = {3,3};
+//		int rs = al4.solution1(a, b);
+//		System.out.println(rs);
+		
+		Algorithm_psn al = new Algorithm_psn();
+		al.solution();
 	}		
 }

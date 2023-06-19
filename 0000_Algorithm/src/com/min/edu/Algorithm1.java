@@ -35,5 +35,13 @@ public class Algorithm1 {
 		    return n; // 한 자릿수 반환
 	}
 	
+	public int solutionGD(int n) {
+		int answer = 0;
+		
+		
+		
+		return answer;
+	}
+	
 	
 }
