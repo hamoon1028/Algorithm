@@ -19,6 +19,7 @@ public class Main {
 //		int b = al3.solution("aaaa");
 //		System.out.println(b);
 	
+<<<<<<< HEAD
 //		Algorithm4 al4 = new Algorithm4();
 //		int[] a = {1,2};
 //		int[] b = {3,3};
@@ -27,5 +28,12 @@ public class Main {
 		
 		Algorithm_psn al = new Algorithm_psn();
 		al.solution();
+=======
+		Algorithm4 al4 = new Algorithm4();
+		int[] a = {1,2,7};
+		int[] b = {3,2,2,1,5};
+		int rs = al4.solution(a, b);
+		System.out.println(rs);
+>>>>>>> branch 'main' of https://github.com/hamoon1028/Algorithm.git
 	}		
 }
