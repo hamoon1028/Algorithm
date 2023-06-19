@@ -1,6 +1,7 @@
 package com.min.edu;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -19,21 +20,32 @@ public class Main {
 //		int b = al3.solution("aaaa");
 //		System.out.println(b);
 	
-<<<<<<< HEAD
+
 //		Algorithm4 al4 = new Algorithm4();
 //		int[] a = {1,2};
 //		int[] b = {3,3};
 //		int rs = al4.solution1(a, b);
 //		System.out.println(rs);
+
+//		Algorithm4 al4 = new Algorithm4();
+//		int[] a = {1,2,7};
+//		int[] b = {3,2,2,1,5};
+//		int rs = al4.solution(a, b);
+//		System.out.println(rs);
 		
 		Algorithm_psn al = new Algorithm_psn();
-		al.solution();
-=======
-		Algorithm4 al4 = new Algorithm4();
-		int[] a = {1,2,7};
-		int[] b = {3,2,2,1,5};
-		int rs = al4.solution(a, b);
-		System.out.println(rs);
->>>>>>> branch 'main' of https://github.com/hamoon1028/Algorithm.git
+//		String[] players = {"mumu", "soe", "poe", "kai", "mine"};
+//		String[] callings = {"kai", "kai", "mine", "mine"};
+//		String[] as = al.solution(players, callings);
+//		System.out.println(Arrays.toString(as));
+		
+		String[] name = {"may", "kein", "kain", "radi"}; 
+		int[] yearning = {5, 10, 1, 3};
+		String[][] photo = {{"may", "kein", "kain", "radi"}, {"may", "kein", "brin", "deny"}, {"kon", "kain", "may", "coni"}};
+		
+//		int[] a = al.solution2(name, yearning, photo);
+//		System.out.println(Arrays.toString(a));
+		al.solution2(name, yearning, photo);
+
 	}		
 }

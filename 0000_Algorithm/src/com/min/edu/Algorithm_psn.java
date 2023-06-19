@@ -1,36 +1,56 @@
 package com.min.edu;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Algorithm_psn {
 
-	public void solution() {
-		String[] players = {"first", "second", "third", "fourth", "fifth"};
-		String[] callings = {"fourth", "fourth", "fifth", "fifth"};
+	//경주
+	public String[] solution(String[] players, String[] callings) {
 		
-		String plstr = Arrays.toString(players);
-		String clstr = Arrays.toString(callings);
-		char[] charply = plstr.toCharArray();
-		char[] charclg = clstr.toCharArray();
+		Map<String, Integer> playerIndexMap = new HashMap<String, Integer>();
 		
-		// callings i번째 : players 몇번째에 있는지 확인 n
-		int idx = 0;
-		for (int i = 1; i < charply.length; i++) {
-			if (charclg[0] == charply[i]) {
-				idx = i;
-			}
+		for (int i = 0; i < players.length; i++) {
+			playerIndexMap.put(players[i], i);
 		}
-		
-//		while (cidx < callings.length) {
-//			int cidx = 0;
-//			// temp = players [n-1]
-//			String temp = players[idx - 1];
-//			// players [n-1] = callings[0]
-//			players[idx - 1] = callings[cidx];
-//		}
-		
+
+		for (String calling : callings) {
+			int i = playerIndexMap.get(calling);
+			
+			if(i > 0) {
+				String temp = players[i-1];
+				players[i-1] = players[i];
+				players[i] = temp;
+				
+				playerIndexMap.put(calling, i - 1);
+				playerIndexMap.put(players[i], i);
+			} 
+		}
+		return players;
+    }
 	
-		
-	}
+	//추억 점수
+	public int[] solution2(String[] name, int[] yearning, String[][] photo) {
+		int[] answer = new int[photo.length];
+	       Map<String, Integer> score = new HashMap<String, Integer>();
+	       for (int i = 0; i < name.length; i++) {
+			score.put(name[i], yearning[i]);
+	       }
+	      
+	       for (int i = 0; i < photo.length; i++) {
+	    	   int sum = 0;
+			for (int j = 0; j < photo[i].length; j++) {
+				if(score.containsKey(photo[i][j])) {
+					int eachScore = score.get(photo[i][j]);
+					sum += eachScore;
+				}
+			}
+			answer[i] = sum;
+		}
+	       
+	       return answer;
+	   }
+	
 	
 }
